@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMe3nVk3fokqNXVd1oqlAHgAAAAACAAAAAAAQZgAAAAEAACAAAABbTrc36Ws5qvoVvf/97IhgtsmVSThGCWoW3TaaV4oTpwAAAAAOgAAAAAIAACAAAACAUbOMz8K5IbjhKMqiQy3HGMu9s+XgqqGzAgRGbPAWPYAAAADW0lz4mLqGRoVUi9Vp2LOKz7YyhZTGh4b97mVJU75645JR78FR1pfP3zKUmjLaWuphsC4y3gNR2yzUE1NXqo6l4TbDf04z1twGDYmfSkZ+BjCsb6p1m05YfEeMLfCa6Fq8ymD0Ph1NtfZfsBKcbxt2wl25RsjT4OfwtFRJ5Iace0AAAADwg+1ywIx57t2joiCTx5diBB7lUOLXXmvFZ7K7SQsTr/JdF3t4YA/pXOpE/C3oa9cUwruaVBCwmVcoP0Kpvzhs</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:usersregistrationdbser.database.windows.net,1433%3bInitial Catalog=UsersRegistration_db%3bUser Id=Swetlana%40usersregistrationdbser%3bPassword=8151059</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="UsersRegistration.Models.ApplicationContext">
+      <Value>Data Source=tcp:usersregistrationdbser.database.windows.net,1433%3bInitial Catalog=UsersRegistration_db%3bUser Id=Swetlana%40usersregistrationdbser%3bPassword=8151059</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

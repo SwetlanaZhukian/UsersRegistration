@@ -1,0 +1,81 @@
+﻿@model UsersRegistration.Models.ViewModels.RegistrationViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link href="~/css/register.css" rel="stylesheet" />
+    <link href="~/css/validation.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card bg-light" style="margin-top: 30px;">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Create Account</h4>
+                <form method="post" asp-action="Register" asp-controller="Account">
+                    <div asp-validation-summary="ModelOnly"></div>
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input class="form-control" asp-for="Name" placeholder="Name" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Name"></span>
+                    </div>
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input class="form-control" asp-for="Email" placeholder="Email address" type="email" />
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Email"></span>
+                    </div>
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" asp-for="Password" placeholder="Create password" type="password" />
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Password"></span>
+                    </div>
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" asp-for="PasswordConfirm" placeholder="Repeat password" type="password" />
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="PasswordConfirm"></span>
+                    </div>
+
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </div>
+                    <p class="text-center">Have an account? <a  asp-area="" asp-controller="Account" asp-action="Login">Log In</a> </p>
+                </form>
+            </article>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+       
+    }
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,55 @@
+﻿@model List<UsersRegistration.Models.ViewModels.UsersViewModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/table.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link href="~/css/table.css" rel="stylesheet" />
+    <script src="~/js/site.js"></script>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="icon-bar">
+            <button title="Delete" id="submitbtn" disabled="disabled" asp-action="Delete" asp-controller="Home" type="submit" class="btn btn-link text-dark"><i class="far fa-trash-alt"></i></button>
+            <button title="Block" id="submitbtn1" disabled="disabled" asp-action="Bloked" asp-controller="Home" type="submit" class="btn btn-link  text-dark "><i class="fas fa-lock"></i></button>
+            <button title="Unblock" id="submitbtn2" disabled="disabled" asp-action="UnBloked" asp-controller="Home" type="submit" class="btn btn-link text-dark"><i class="fas fa-lock-open"></i></button>
+        </div>
+        <div class="tableFixHead">
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">@Html.CheckBox("CheckAll", false, new { id = "checkall" })</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Email </th>
+                        <th scope="col">Date of registration</th>
+                        <th scope="col">Date of last login</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Count(); i++)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="checkitem" asp-for="@Model[i].IsChecked" />
+                                <input type="hidden" asp-for="@Model[i].Id" />
+                            </td>
+                            <td>@Model[i].Id</td>
+                            <td>@Model[i].Name</td>
+                            <td>@Model[i].Email</td>
+                            <td>@Model[i].RegistrationDate?.ToString("dd.MM.yyyy ")</td>
+                            <td>@Model[i].LastLoginTime?.ToString("yyyy-MM-dd hh:mm")</td>
+                            <td>@Model[i].IsBlock</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
