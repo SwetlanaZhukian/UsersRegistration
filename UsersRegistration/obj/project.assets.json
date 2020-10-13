@@ -6276,11 +6276,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Женька\\Desktop\\UsersRegistration\\UsersRegistration\\UsersRegistration.csproj",
+      "projectUniqueName": "E:\\Users\\UsersRegistration\\UsersRegistration\\UsersRegistration.csproj",
       "projectName": "UsersRegistration",
-      "projectPath": "C:\\Users\\Женька\\Desktop\\UsersRegistration\\UsersRegistration\\UsersRegistration.csproj",
+      "projectPath": "E:\\Users\\UsersRegistration\\UsersRegistration\\UsersRegistration.csproj",
       "packagesPath": "C:\\Users\\Женька\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Женька\\Desktop\\UsersRegistration\\UsersRegistration\\obj\\",
+      "outputPath": "E:\\Users\\UsersRegistration\\UsersRegistration\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Женька\\AppData\\Roaming\\NuGet\\NuGet.Config",

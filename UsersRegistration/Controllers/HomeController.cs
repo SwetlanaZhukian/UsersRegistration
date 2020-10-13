@@ -15,7 +15,7 @@ using UsersRegistration.Models.ViewModels;
 namespace UsersRegistration.Controllers
 {
 
-    [Authorize]
+   
     public class HomeController : Controller
     {
         private readonly UserManager<User> userManager;
